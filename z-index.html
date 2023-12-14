@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont{
+            width: 200px;
+            height: 200px;
+            
+        }
+        #cont1{
+            background-color: red;
+            z-index: 5;
+            /* position: absolute; */
+        }
+        #cont2{
+            background-color: pink;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            /* z-index: 2; */
+        }
+        #cont3{
+            background-color: burlywood;
+            /* position: absolute; */
+            top: 100px;
+            left: 100px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont" id="cont1"></div>
+    <div class="cont" id="cont2"></div>
+    <div class="cont" id="cont3"></div>
+
+</body>
+</html>

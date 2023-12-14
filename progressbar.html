@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        .progresscont{
+            width: 500px;
+            height: 550px;
+            box-shadow: 3px 3px 8px 5px grey ;
+            padding:50px 80px;
+            margin:auto;
+        }
+        
+        .barbox{
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .barbox:hover{
+        }
+        .text{
+
+        }
+        .bar{
+            width:100% ;
+            height: 100%;
+            background-color: rgb(81, 79, 79);
+            position: absolute;
+            border-radius: 10px;
+           
+        }
+        .bar span{
+            position: absolute;
+            width: 80%;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #6665ee;
+            border-radius: 10px;
+            animation: slow 1s;
+        }
+        @keyframes slow {
+            0%{
+                width: 0%;
+            }
+            
+            
+        }
+
+        .bar #first{
+            width: 100%;
+        }
+        .bar #second{
+            width: 70%;
+        }
+        .bar #third{
+            width: 70%;
+        }
+        .bar #fourth{
+            width: 50%;
+        }
+        .bar #fifth{
+            width: 80%;
+        }
+        .bar #sixth{
+            width: 60%;
+        }
+        .bar #seventh{
+            width: 90%;
+        }
+        .bar span::before{
+            position: absolute;
+            content: "";
+            height: 0px;
+            width: 0px;
+            right: 0;
+            top: -10px;
+            border: 8px solid transparent;
+            border-bottom-width: 0px;
+            border-right-width:0px ;
+            border-top-color: #000 ;
+          
+           
+           
+        }
+        .bar span::after{
+            position: absolute;
+            content: "80%";
+            right: 0;
+            top: -28px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 3px;
+            padding: 1px 9px;
+           
+           
+        }
+        .bar #first::after{
+            content:"100%";
+        }
+        .bar #second::after{
+            content:"70%";
+        }
+        .bar #third::after{
+            content:"70%";
+        }
+        .bar #fifth::after{
+            content:"50%";
+        }
+        .bar #sixth::after{
+            content:"80%";
+        }
+        .bar #seventh::after{
+            content:"90%";
+        }
+        @media screen (max-width:750px) {
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="progresscont">
+        <div class="barbox">
+            <div class="text">
+                <span>Family support</span>
+            </div>
+            <div class="bar"><span id="first"></span></div>
+        </div>
+        <div class="barbox">
+            <div class="text">
+                <span>Happiness</span>
+            </div>
+            <div class="bar"><span id="second"></span></div>
+        </div>
+        <div class="barbox">
+            <div class="text">
+                <span>Sadness</span>
+            </div>
+            <div class="bar"><span id="third"></span></div>
+        </div>
+        <div class="barbox">
+            <div class="text">
+                <span>Frnds</span>
+            </div>
+            <div class="bar"><span id="fourth"></span></div>
+        </div>
+        <div class="barbox">
+            <div class="text">
+                <span>Frnds</span>
+            </div>
+            <div class="bar"><span id="fifth"></span></div>
+        </div>
+        <div class="barbox">
+            <div class="text">
+                <span>Frnds</span>
+            </div>
+            <div class="bar"><span id="sixth"></span></div>
+        </div>
+        <div class="barbox">
+            <div class="text">
+                <span>Frnds</span>
+            </div>
+            <div class="bar"><span id="seventh"></span></div>
+        </div>
+    </div>
+</body>
+</html>

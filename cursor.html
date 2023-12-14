@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: #000113;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    .cursor{
+        width: 20px;
+        height: 20px;
+        background:blue;
+        border-radius: 50%;
+        position: fixed;
+        z-index: 999;
+        animation: color 3s infinite;
+        box-shadow: 0 0 20px blue,
+                    0 0 60px blue,
+                    0 0 100px blue;
+        display: none;
+        pointer-events: none;
+
+    }
+    @keyframes color {
+        0%{
+            filter: hue-rotate(0deg);
+        }
+        100%{
+            filter: hue-rotate(360deg);
+        }
+    }
+    .cursor::before{
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        background-color: blue;
+        opacity: .2;
+        transform: translate(-50%,-50%);
+    }
+    </style>
+</head>
+<body>
+    <div class="cursor"></div>
+
+    <script>
+        const cursor = document.querySelector(".cursor");
+
+        document.addEventListener("mousemove",(e)=>{
+            let x = e.pageX;
+            let y = e.pageY;
+
+            cursor.style.top = y + "px";
+            cursor.style.left = x + "px";
+            cursor.style.display = "block";
+
+
+            function mouseStopped(){
+                cursor.style.display ="none";
+            }
+            timeout = setTimeout(mouseStopped, 1000);
+        });
+
+        document.addEventListener("mouseout", ()=>{
+            // cursor.style.display = "none";
+            
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .aaa {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(112, 204, 240);
+            transform-style: preserve-3d;
+            perspective: 800px;
+
+        }
+
+        .danda {
+            width: 20px;
+            height: 400px;
+            background-color: silver;
+            perspective: 350px;
+
+        }
+        .danda::after{
+            content: "";
+            position: absolute;
+            top:100%;
+            left: 0;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 100px;
+            background-color: silver;
+        }
+
+        .flag {
+            width: 200px;
+            height: 150px;
+            /* background-color: red; */
+            animation:hawa 10s linear infinite;
+            position: relative;
+            top: 0;
+            left: 20px;
+            transform: rotateY(0deg);
+            transform-origin: left;
+        }
+
+        .clr1 {
+            background-color: rgb(255, 140, 0);
+            width: 200px;
+            height: 50px;
+
+
+        }
+
+        .clr2 {
+            background-color: rgb(255, 255, 255);
+            width: 200px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .clr3 {
+            background-color: green;
+            width: 200px;
+            height: 50px;
+
+        }
+
+        .outerspan {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid navy;
+        }
+
+       
+        @keyframes hawa {
+            0% {
+                transform: rotateY(30deg);
+            }
+
+            50% {
+                transform: rotateY(-30deg);
+            }
+
+            100% {
+                transform: rotateY(30deg);
+            }
+        }
+
+        .blocks{
+            width: 8px;
+            height: 52px;
+            position: absolute;
+            left: 50%;
+            border-left: 1px solid navy;
+            transform: rotate(calc(30deg*var(--i)));
+            transform-origin: 0px 26px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="aaa">
+        <div class="danda">
+            <div class="flag">
+                <div class="clr1"></div>
+                <div class="clr2"><span class="outerspan">
+                    <span class="blocks" style="--i:1;"></span>
+                    <span class="blocks" style="--i:2;"></span>
+                    <span class="blocks" style="--i:3;"></span>
+                    <span class="blocks" style="--i:4;"></span>
+                    <span class="blocks" style="--i:5;"></span>
+                    <span class="blocks" style="--i:6;"></span>
+                    <span class="blocks" style="--i:7;"></span>
+                    <span class="blocks" style="--i:8;"></span>
+                    <span class="blocks" style="--i:9;"></span>
+                    <span class="blocks" style="--i:10;"></span>
+                    <span class="blocks" style="--i:11;"></span>
+                    <span class="blocks" style="--i:12;"></span>
+                </span></div>
+                <div class="clr3"></div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

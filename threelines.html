@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/2ab82024fd.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 200vh;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-color: antiquewhite;
+        }
+        .navbar{
+            width: 100%;
+            height: 12vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            padding-right: 10px;
+        }
+        .logo{
+            width: 130px;
+            margin-left: 1rem;
+        }
+        .logo img{
+            width: 7rem;
+        }
+        /* #line{
+            width: 22px;
+        }
+        #line i{
+            color: white;
+            font-size: 22px;
+        } */
+        input{
+            width: 20px;
+            height: 30px;
+        }
+        .box{
+            width: 200px;
+            height: 100vh;
+            background-color: rgb(37, 36, 36);
+            position: absolute;
+            right: -200px;
+            top: 0;
+            transition: right 0.3s;
+            display: none;
+            
+        }
+        .box ul{
+            position: relative;
+            top: 12vh;
+            text-align: center;
+
+        }
+        .box ul li{
+            list-style: none;
+            margin-bottom: 40px;
+        }
+        .box ul li a{
+            text-decoration: none;
+            color: white;
+            font-size: 22px;
+            padding: 8px 12px;
+        }
+        
+        input[type='checkbox']:checked~ .box{
+           right: 0px;
+           display: block;
+        }
+        input[type='checkbox']:checked{
+            position: relative;
+            top: 0px;
+            right: 0;
+            z-index:3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="/googlelogo_color_92x30dp.png" alt="">
+            </div>
+            <!-- <span id="line"><i class="fa fa-align-justify" aria-hidden="true"></i></span> -->
+            <input type="checkbox">
+            <div class="box">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Contact</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

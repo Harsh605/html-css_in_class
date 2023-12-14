@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            background: #ffe8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .testimonial {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .testimonial-text {
+            background: #ff0058;
+            width: 100%;
+            height: 350px;
+            color: #fff;
+            position: relative;
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .user-text {
+            width: 80%;
+            text-align: center;
+            line-height: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        .part2 {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .user-pic {
+            width: 60px;
+            height: 60px;
+            padding: 8px;
+            margin: 10px;
+            border-radius: 55%;
+        }
+
+        .user-text .active-pic {
+            border: 3px solid red;
+        }
+
+        .active-text {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="testimonial">
+            <div class="testimonial-text">
+                <div class="user-text">
+                    <p>We Train You to Become a Fullstack Blockchain Developer of Corporate Level</p>
+                    <span>Harsh Gupta</span>
+                </div>
+                <div class="user-text active-text">
+                    <p>We Train You to Become a Fullstack Blockchain Developer of Corporate Level
+                    </p>
+                    <span>lalit Gupta</span>
+                </div>
+                <div class="user-text">
+                    <p>We Train You to Become a Fullstack Blockchain Developer of Corporate Level
+                    </p>
+                    <span>raghav Gupta</span>
+                </div>
+                <div class="user-text">
+                    <p>We Train You to Become a Fullstack Blockchain Developer of Corporate Level
+                    </p>
+                    <span>nikita Gupta</span>
+                </div>
+            </div>
+            <div class="part2">
+                <img src="/ok.jfif" class="user-pic" onclick="showReview()">
+                <img src="/download.jfif" class="user-pic active-pic" onclick="showReview()">
+                <img src="/ok.jfif" class="user-pic" onclick="showReview()">
+                <img src="/download.jfif" class="user-pic" onclick="showReview()">
+            </div>
+        </div>
+    </div>
+    <script>
+        let userTexts = document.getElementsByClassName("user-text");
+        let userPics = document.getElementsByClassName("user-pic");
+
+        function showReview() {
+            for (userPic of userPics) {
+                userPic.classlist.remove("active-pic");
+            }
+            for (userText of userTexts) {
+                userText.classlist.remove("active-text");
+            }
+
+            let i = Array.from(userPics).indexof(event.target);
+            userPics[i].classList.add("active-pic");
+            userTexts[i].classList.add("active-text");
+        }
+    </script>
+</body>
+
+</html>

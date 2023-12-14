@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            width: 300px;
+            height: 70px;
+            background-color: rgb(118, 116, 236);
+            border-radius: 20px;
+            position: relative;
+            transition: 0.5s ease-in-out;
+        }
+
+        .box.active {
+            height: 400px;
+        }
+
+        .boxdown {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translatex(-50%);
+            background-color: rgb(118, 116, 236);
+            width: 70px;
+            height: 60px;
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+            cursor: pointer;
+        }
+
+        .boxdown::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -19px;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-top-right-radius: 20px;
+            box-shadow: 11px -10px 0 10px rgb(118, 116, 236);
+        }
+
+        .boxdown::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-top-left-radius: 20px;
+            box-shadow: -11px -10px 0 10px rgb(118, 116, 236);
+        }
+
+        .boxdown span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(405deg);
+            width: 10px;
+            height: 10px;
+            border-bottom: 3px solid #fff;
+            border-right: 3px solid #fff;
+            transition: 0.5s ease-in-out;
+
+        }
+
+        .box.active .boxdown span {
+            transform: translate(-50%, -50%) rotate(225deg);
+        }
+
+        .contentbox {
+            /* position: absolute; */
+        }
+
+        .contient {
+            text-align: center;
+
+        }
+
+        .box.active .imgbx {
+            display: block;
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background-color: #fff;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .imgbx img {
+            display: none;
+        }
+
+        .box.active .imgbx img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="contentbox">
+            <div class="contient">
+                <h1>My Bio</h1>
+                <div class="imgbx">
+                    <img src="/istockphoto-168542582-612x612.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="boxdown">
+            <span></span>
+        </div>
+
+    </div>
+
+    <script>
+        let box = document.querySelector('.box');
+        let boxdown = document.querySelector('.boxdown');
+        boxdown.onclick = function () {
+            box.classList.toggle('active')
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = [1, 2, 3, 4]
+        let arr2 = [4, 2, 3, 5]
+
+        // there are two type of questions
+
+        // function compare(first,second){
+        //     let concatArr= arr1.concat(arr2)
+        //     let resultArr = [...new Set(concatArr)]
+
+        //     if(resultArr.length===first.length && resultArr.length===second.length){
+        //         console.log("Yes, Both array are same")
+        //     }
+        //     else{console.log("No, Both array are not same")}
+        // }
+        function compare(first, second) {
+            const arr = []
+            for (const i in arr1) {
+                for (const j in arr2) {
+                    if (arr1[i] === arr2[j]) {
+                        arr.push({ i, j })
+                    }
+                }
+            }
+            return console.log(arr)
+        }
+        compare(arr1, arr2)
+    </script>
+</body>
+
+</html>

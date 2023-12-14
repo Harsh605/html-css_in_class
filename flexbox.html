@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(253, 233, 236);
+        }
+        .container h1{
+            color: black;
+            text-align: center;
+        }
+        .container1{
+            width: 80%;
+            margin: auto;
+            height: auto;
+            background-color: #f8c291;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container1 .box{
+            background-color: #e55039;
+            /* height: 200px; */
+            /* flex-basis: 200px; */
+
+        }
+        .box:first-child{
+            background-color: #82ccdd;
+            flex-basis: 400px;
+        }
+        .box:last-child{
+            background-color: #78e08f;
+        }
+    </style>
+</head>
+<body>
+    <dic class="container">
+        <h1>Our services</h1>
+        <div class="container1">
+            <div class="box">
+                <h2>Hello How are you</h2>
+            </div>
+            <div class="box">
+                <h2>Hello How are you</h2>
+            </div>
+            <div class="box">
+                <h2>Hello How are you</h2>
+            </div>
+        </div>
+    </dic>
+</body>
+</html>

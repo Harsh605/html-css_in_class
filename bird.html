@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        .cont{
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            
+        }
+        .cont .bird{
+            width: 100%;
+            position: absolute;
+        }
+        .bird img{
+            width: 150px;
+            position: relative;
+            animation: fly 10s infinite;
+            
+        }
+        @keyframes fly {
+            0%{
+                left: -15%;
+                top: 0px;
+            }
+            15%{
+                top: 40px;
+            }
+            25%{
+                top: 50px;
+            }
+            50%{
+                top:80px ;
+            }
+            75%{
+                top:70px ;
+            }
+            95%{
+                left:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="bird">
+            <img src="/fad225214130494f40d2c8f22166aab4.gif" alt="">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/class.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            /* height: 100vh; */
+            background-image: url("/pexels-soumil-kumar-735911.jpg");
+            background-size: 100% 100%;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 12vh;
+            background-color: #19222b;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 50px;
+            padding-right: 10px;
+            /* position: fixed; */
+        }
+/* 
+        .logo img {
+            width: 8rem;
+            cursor: pointer;
+        } */
+
+        .show-navbar ul {
+            display: flex;
+        }
+
+        .show-navbar ul li {
+            list-style: none;
+        }
+
+        .show-navbar ul li a {
+            text-decoration: none;
+            color: wheat;
+            font-size: 22px;
+            font-family: sans-serif;
+            margin-left: 12px;
+            padding: 5px 8px;
+            text-transform: capitalize;
+
+        }
+
+        .show-navbar ul li a:hover {
+            color: red;
+        }
+
+        /* hide navbar */
+        #check {
+            width: 25px;
+            height: 25px;
+            display: none;
+        }
+
+        .hide-navbar {
+            width: 250px;
+            height: 100vh;
+            background-color: black;
+            /* position: absolute; */
+            /* right: -250px; */
+            /* top: 0; */
+            /* display: none; */
+            /* z-index: 4; */
+
+        }
+
+        /* #check:checked~.hide-navbar {
+            display: block;
+            right: 0px;
+
+        } */
+
+        /* #check:checked {
+            position: relative;
+            z-index: 5;
+        } */
+
+        /* .hide-navbar ul {
+            position: relative;
+            top: 12vh;
+            text-align: center;
+        } */
+/* 
+        .hide-navbar ul li {
+            list-style: none;
+            margin-bottom: 40px;
+        } */
+
+        /* .hide-navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 22px;
+            padding: 8px 12px;
+            text-transform: capitalize;
+        } */
+
+        @media screen and (max-width: 730px) {
+            #check {
+                display: block;
+            }
+
+            .show-navbar {
+                display: none;
+            }
+        }
+
+     
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="/googlelogo_color_92x30dp.png" alt="">
+            </div>
+            <div class="show-navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">gallery</a></li>
+                    <li><a href="#">contact us</a></li>
+                </ul>
+            </div>
+            <input type="checkbox" id="check">
+            <div class="hide-navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">gallery</a></li>
+                    <li><a href="#">contact us</a></li>
+                </ul>
+            </div>
+        </div>
+
+   
+    </div>
+   
+</body>
+
+</html>

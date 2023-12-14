@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: grey;
+            height: 100vh;
+
+        }
+        .road{
+            border-bottom: 2px dotted black;
+        }
+        .man{
+            background-image: url(/ui-editor-component-sprite-sheets-walking.png);
+            width: 67px;
+            height: 67px;
+            animation: walk 1s steps(12) infinite,forward 4s linear infinite;
+        }
+        @keyframes walk {
+            0%{
+                background-position: 0px;
+            }
+            100%{
+                background-position: 800px;
+            }
+        }
+        @keyframes forward {
+            0%{
+                transform: translateX(0px);
+            }
+            100%{
+                transform: translateX(1200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="man"></div>
+    <div class="road"></div>
+</body>
+</html>

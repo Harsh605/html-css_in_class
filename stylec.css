@@ -1,0 +1,386 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    font-family: "Nunito", sans-serif;
+    color: #677294;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/app-banner.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 740px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+}
+
+.logo img {
+    width: 160px;
+}
+
+.navbar ul {
+    display: flex;
+}
+#navcheckbox{
+    display: none;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    padding: 8px 12px;
+    margin-right: 12px;
+    font-size: 22px;
+    color: #002060;
+
+}
+
+/* navbar end */
+.container1 {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container1 img {
+    width: 50%;
+}
+
+.container1-textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+
+}
+
+.container1-textbox h1 {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 50px;
+    color: #002060;
+}
+
+.container1-textbox h1 strong {
+    font-weight: 600;
+    line-height: 1.2;
+    font-size: 50px;
+    color: #002060;
+}
+
+.container1-textbox p {
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    color: #002060;
+    margin-left: 30px;
+}
+
+/* 1st part end */
+.container2 {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.container2 h1 {
+    color: #002060;
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.container2 .line {
+    width: 70px;
+    height: 4px;
+    background-color: skyblue;
+    margin: auto;
+    margin-top: 26px;
+    margin-bottom: 26px;
+}
+
+.container2 p {
+    text-align: center;
+    line-height: 2;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+/* 2nd part end */
+
+.container3 {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.cont3-row {
+    display: flex;
+    /* background-image: url("https://fthmb.tqn.com/SZQxFf2vbDR-vbw_2jRn68C-V90=/3888x2592/filters:fill(auto,1)/Pet-frog-663966-58c94e593df78c353c9988d9.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.6; */
+}
+
+.cont3-row .box {
+    padding: 50px 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 8%);
+    border: 1px solid #f7f7f7;
+    height: auto;
+}
+
+.cont3-row .box:hover {
+    box-shadow: 0 0 40px rgba(74, 195, 243, 0.6);
+}
+
+.cont3-row img {
+    display: block;
+    margin: auto;
+    width: 35%;
+}
+
+.cont3-row .box h3 {
+    text-align: center;
+    font-size: 25px;
+    color: #002060;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.cont3-row .box p {
+    text-align: justify;
+    line-height: 2;
+    font-weight: 500;
+    color: #677294;
+    font-size: 16px;
+    margin-bottom: 10px;
+
+}
+
+/* 3rd part end */
+
+.container4 {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.cont4-row {
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.cont4-textbox {
+    margin: 0px 22px;
+}
+
+.cont4-textbox h1 {
+    color: #002060;
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.cont4-textbox p {
+    line-height: 1.9;
+    text-align: justify;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.cont4-row img {
+    width: 50%;
+}
+
+.cont4-row button {
+
+    box-shadow: 5px 9px 20px 0px rgb(255 138 115);
+    background: linear-gradient(142deg, #FFD474 0%, #FF8C8C 100%);
+    border-radius: 5px;
+    height: 55px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 8px;
+    border: none;
+}
+
+.cont4-row button:hover {
+    background: linear-gradient(142deg, #FF8C8C 0%, #FFD474 100%);
+
+}
+
+/* 4th end */
+
+.container5 {
+    width: 100%;
+}
+
+.cont5-row {
+    display: flex;
+}
+
+.cont5-row .cont5-img {
+    width: 50%;
+    background-color: #e6ecff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.cont5-row .cont5-img img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.cont5-textbox {
+    width: 50%;
+    background: #002060;
+    opacity: 0.8;
+    height: auto;
+    border-radius: 20px;
+    border: 0px solid;
+    padding: 10% 0;
+}
+
+.cont5-textbox h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.cont5-textbox p {
+    text-align: justify;
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    word-spacing: 4px;
+    padding: 15px 26px;
+}
+
+.cont5-textbox ul {
+    margin-left: 50px;
+}
+
+.cont5-textbox ul li {
+    list-style: none;
+    color: white;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.fa-brands {
+    margin-right: 10px;
+    font-size: 17px;
+    color: #e6ecff;
+}
+
+
+
+
+
+.container6{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+.container6 h1{
+    color: #002060;
+    font-size: 30px;
+    text-align: center;
+}
+.cont6-line{
+    width: 70px;
+    height: 4px;
+    background-color: skyblue;
+    margin: auto;
+    margin-top: 26px;
+    margin-bottom: 26px;
+}
+.cont6-row{
+    display: flex;
+    margin-bottom: 100px;
+}
+.cont6-box{
+    margin-left: 10px;
+    height: auto;
+    padding: 60px 15px;
+}
+.cont6-box h2{
+    font-size: 22px ;
+    color: #002060;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.cont6-box p{
+    font-size: 16px;
+    text-align: left;
+}
+.cont6-box:hover{
+    background: linear-gradient(130deg, #FF8C8C 0%, #6E82EE 50%, #5580FF 100%);
+    border-radius: 10px;
+    height: auto;
+    
+}
+
+.cont6-box:hover h2{
+    color: white;
+}
+.cont6-box:hover p{
+    color: white;
+}
+
+
+.container7{
+    max-width: 1200px;
+    margin: auto;
+}
+.cont7-row{
+    display: flex;
+}
+.cont7-box{
+   padding: 100px 50px;
+   margin-right: 10px;
+}
+  
+.cont7-box img{
+    width: 50%;
+}
+.cont7-box:hover{
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}

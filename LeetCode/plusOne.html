@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>hellp</h1>
+<body>
+
+
+    <script>
+        // Example arr = [1,2,3]
+        // Output = [1,2,4]
+
+        // Example arr1 = [9,9,9]
+        // Output = [1,0,0,0]
+
+        // Example arr2 = [4,8,9,9]
+        // Output = [4,9,0,0]
+
+        let arr = [1, 2, 9, 9]
+        function plusOne(arr) {
+            let n = (arr.length) - 1;
+            let output = []
+            for (let i = n; i <= n; i--) {
+                if (arr[i] === 9 || arr[i] === 10) {
+                    output.push(0)
+                    arr[i - 1] += 1
+                }
+                else (output.push(arr[i]))
+
+
+            }
+            return console.log(output)
+        }
+
+        plusOne(arr)
+
+
+    </script>
+</body>
+
+</html>

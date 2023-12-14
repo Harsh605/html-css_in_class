@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .cont {
+            margin-top: 10px;
+            width: 400px;
+            height: 200px;
+            border: 1px solid red;
+            transform: translateX(-400%);
+            transition: .5s;
+        }
+
+        .cont:nth-child(even) {
+            background-color: red;
+            transform: translateX(400%);
+        }
+
+        .cont:nth-child(odd) {
+            background-color: yellow;
+        }
+
+        .cont.show{
+            transform: translateX(0%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">HEllo</div>
+    <div class="cont">HEllo</div>
+    <div class="cont">HEllo</div>
+    <div class="cont">HEllo</div>
+    <div class="cont">HEllo</div>
+    <div class="cont">HEllo</div>
+    <div class="cont">HEllo</div>
+    <div class="cont">HEllo</div>
+    <div class="cont">HEllo</div>
+    <div class="cont">HEllo</div>
+    <div class="cont">HEllo</div>
+    <div class="cont">HEllo</div>
+
+    <script>
+        let cont = document.querySelectorAll(".cont")
+        window.addEventListener("scroll", () => {
+            let triggerBottom = window.innerHeight/5*4
+
+            cont.forEach(box => {
+            let boxTop = box.getBoundingClientRect().top;
+                if (boxTop < triggerBottom) {
+                    box.classList.add("show")
+                }
+                else {
+                    box.classList.remove("show")
+                }
+            });
+
+        })
+
+    </script>
+</body>
+
+</html>

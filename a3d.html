@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont1{
+            width: 400px;
+            height: 400px;
+            background-color: grey;
+            margin: auto;
+            perspective: 800px;
+            transform: rotateY(50deg);
+            transform-style: preserve-3d;
+
+        }
+        .img-box{
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            transform: rotatex(0deg);
+            transform-origin: top;
+            /* animation-name: xyz;
+            animation-duration: 6s;
+            animation-iteration-count: infinite; */
+            animation: xyz 6s infinite;
+            /* animation-timing-function:ease ; */
+        }
+        @keyframes xyz {
+            0%{
+                transform: rotateX(30deg);
+            }
+            33%{
+                transform: rotateX(-30deg);
+            }
+            66%{
+                transform: rotateX(30deg);
+            }
+            99%{
+                transform: rotateX(0deg);
+            }
+        }
+        img{
+            width: 400px;
+            height: 400px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="cont1">
+        <div class="img-box">
+            <img src="https://th.bing.com/th/id/R.77e67367b2700684eaca35863001bd98?rik=HB1j6Rp35hky7A&riu=http%3a%2f%2fwww.wallpapergeeks.com%2fwp-content%2fuploads%2f2015%2f04%2frocky-beach-wallpaper.jpg&ehk=e95Jhra3%2fmB8oNeu4PpNN%2bAzMdEwsjEmGtca4jKvu7k%3d&risl=&pid=ImgRaw&r=0" alt="">
+        </div>
+    </div>
+</body>
+</html>

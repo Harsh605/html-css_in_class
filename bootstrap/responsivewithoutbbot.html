@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .cont {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 100vh;
+        }
+
+        .box {
+
+            width: calc(25% - 20px);
+            height: 200px;
+            margin-right: 10px;
+            margin-left: 10px;
+            background-color: blue;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .box {
+                width: calc(100% - 20px);
+                margin-bottom: 20px;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            .box {
+                width: calc(50% - 20px);
+                margin-bottom: 20px;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .box {
+                width: calc(33% - 20px);
+                margin-bottom: 20px;
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            .box {
+                width: calc(25% - 20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div data-aos="slide-right" data-aos-duration="1000" data-aos-delay="900" class="box">s</div>
+        <div data-aos="slide-right" data-aos-duration="1000" data-aos-delay="50" class="box">s</div>
+        <div data-aos="slide-left" data-aos-duration="1000" data-aos-delay="50" class="box">s</div>
+        <div data-aos="slide-left" data-aos-duration="1000" data-aos-delay="900" class="box">s</div>
+
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                once: true,
+                offset: 200,
+            }
+        );
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont{
+            width: 500px;
+            height: 40px;
+            margin-top: 12px ;
+            background-color: pink;
+            animation: a 6s infinite;
+           
+        }
+        #cont1{
+            animation-timing-function: ease;
+        }
+        #cont2{
+            animation-timing-function:ease-in;
+        }
+        #cont3{
+            animation-timing-function:ease-out;
+        }
+        #cont4{
+                animation-timing-function:ease-in-out;
+        }
+        #cont5{
+                animation-timing-function:linear;
+        }
+        #cont6{
+                animation-timing-function: steps(4);
+        }
+        @keyframes a {
+            0%{
+                width: 0px;
+            }
+            50%{
+                width: 500px;
+            }
+            100%{
+                width: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cont" id="cont1">ease</div>
+    <div class="cont" id="cont2">ease-in</div>
+    <div class="cont" id="cont3">ease-out</div>
+    <div class="cont" id="cont4">ease-in-out</div>
+    <div class="cont" id="cont5">linear</div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 200px;
+            height: 200px;
+           
+            background-image: url("https://thumbs.dreamstime.com/b/girl-assassin-waiting-his-victim-road-holding-her-dragunov-sniper-rifle-svd-81809309.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+
+        }
+        #inner{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            transform: perspective(800px) rotatey(0deg);
+            transform-origin: left;
+            animation: gate 5s infinite;
+            
+        }
+
+    @keyframes gate {
+        0%{
+            transform: perspective(800px) rotatey(0deg);
+        }
+        50%{
+            transform: perspective(800px) rotatey(-90deg); 
+        }
+        100%{
+            transform: perspective(800px) rotatey(0deg);
+        }
+    }
+      
+    </style>
+
+</head>
+<body>
+<div class="outer">
+    <div id="inner"></div>
+</div>
+
+</body>
+</html>

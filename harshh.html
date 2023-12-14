@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont1{
+            width: 400px;
+            height: 300px;
+            transform-style:preserve-3d ;
+            perspective: 800px;
+            transform: rotateY(50deg);
+            background-color: grey;
+        }
+        .img-box{
+           width: 400PX;
+           height: 300px;
+            transform: rotateX(30deg);
+            background-color: pink;
+            transform-origin: top;
+            animation: haha 6s infinite;
+        }
+        @keyframes haha {
+            0%{
+                transform: rotateX(30deg);
+            }
+            50%{
+                transform: rotateX(-30deg);
+            }
+        }
+        img{
+            width: 400px;
+            height: 300px;
+           object-fit: fill;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont1">
+        <div class="img-box">
+            <img src="/NashPoint.jpg" alt="">
+        </div>
+
+    </div>
+</body>
+</html>

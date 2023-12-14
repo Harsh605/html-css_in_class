@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-image: url("/NashPoint.jpg");
+            background-size: 100% 100%;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 12vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            padding-right: 10px;
+        }
+
+        .logo img {
+            width: 140px;
+        }
+
+        .navbar ul {
+            display: flex;
+
+        }
+
+        .navbar ul li {
+            list-style: none;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 22px;
+            padding: 8px 12px;
+            margin-right: 12px;
+        }
+
+        input {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            z-index: 4;
+            /* display: none; */
+        }
+
+        .hide-navbar {
+            width: 200px;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.758);
+            position: absolute;
+            top: 0;
+            right: -200px;
+            z-index: 3;
+
+        }
+
+        input:checked~.hide-navbar {
+            right: 0px;
+            /* display: none; */
+        }
+
+        .hide-navbar ul {
+            position: relative;
+            top: 12vh;
+            text-align: center;
+        }
+
+        .hide-navbar ul li {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .hide-navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 22px;
+            padding: 8px 12px;
+        }
+
+        @media screen and(min-width:670px) {
+            input {
+                display: block;
+            }
+
+            .navbar ul {
+                display: none;
+            }
+
+            input:checked~.hide-navbar {
+                right: 0px;
+                display: block;
+            }
+        }
+
+        /* dropdown menu */
+        .secondul {
+            display: none;
+        }
+
+        .thirdul {
+            display: none;
+        }
+
+        .navbar ul li:hover .secondul {
+            display: block;
+            position: absolute;
+            
+            background-color: black;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+
+        .navbar ul li:hover .secondul ul {
+            display: block;
+        }
+
+        .navbar ul li:hover .secondul ul li {
+            width: 150px;
+            padding: 10px;
+            border-bottom: 1px dotted #fff;
+        }
+
+        .navbar ul li:hover .secondul ul li:last-child {
+            border-bottom: none;
+        }
+
+        .secondul ul li {
+            list-style: none;
+        }
+
+        .secondul ul li a {
+            color: #fff;
+            font-size: 22px;
+        }
+
+        .secondul ul li:hover {
+            background-color: rgb(246, 132, 151);
+        }
+
+        .secondul li:hover .thirdul {
+            display: block;
+            position: absolute;
+            right: 100%;
+            background-color: rgba(0, 0, 0, 0.747);
+            margin-top: -5px;
+        }
+
+        .secondul li:hover .thirdul ul {
+            display: block;
+        }
+
+        .secondul li:hover .thirdul ul li {
+            width: 150px;
+            border-bottom: 1px dotted #fff;
+        }
+
+        /* .secondul li:hover .thirdul ul li:last-child {
+            border-bottom: none;
+        } */
+
+        .thirdul ul li:hover {
+            background-color: rgb(246, 132, 151);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="/googlelogo_color_92x30dp.png" alt="">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About US</a></li>
+                <li><a href="#">Blogs</a>
+                    <div class="secondul">
+                        <ul>
+                            <li><a href="#">Food</a>
+                                <div class="thirdul">
+                                    <ul>
+                                        <li><a href="#">Junk Food</a></li>
+                                        <li><a href="#">Healthy</a></li>
+                                        <li><a href="#">Junk Food</a></li>
+                                        <li><a href="#">Healthy</a></li>
+                                        <li><a href="#">Junk Food</a></li>
+                                        <li><a href="#">Healthy</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#">Cars</a></li>
+                            <li><a href="#">Family</a></li>
+                            <li><a href="#">Training</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+            <input type="checkbox">
+            <div class="hide-navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">products</a></li>
+                    <li><a href="#">contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

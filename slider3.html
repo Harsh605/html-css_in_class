@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .sliderbox{
+        width: 100%;
+        height: 600px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+    }
+    .input{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        z-index: 2;
+        transform: translate(-50%,-50%);
+        border: 2px solid red;
+
+    }
+    input{
+        width: 20px;
+        height: 20px;
+    }
+    input[type="radio"]:checked ~ .sliderbox{
+        border: 2px solid red;
+    }
+    .slider{
+        width: 400%;
+        height: 600px;
+        display: flex;
+        position: relative;
+        animation: slider 20s infinite;
+    }
+    @keyframes slider {
+        0%{
+            left: 0;
+        }
+        20%{
+            left: 0;
+        }
+        25%{
+            left: -100%;
+        }
+        45%{
+            left: -100%;
+        }
+        50%{
+            left: -200%;
+        }
+        70%{
+            left: -200%;
+        }
+        75%{
+            left: -300%;
+        }
+    }
+    img{
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+    
+    <div class="input">
+        <input type="radio" name="check" id="f1">
+        <input type="radio" name="check" id="s">
+        <input type="radio" name="check" id="t">
+        <input type="radio" name="check" id="f">
+    </div>
+    <div class="sliderbox">
+        <div class="slider">
+            <!-- <img src="/NashPoint.jpg" alt="">
+            <img src="https://i.pinimg.com/originals/18/db/d3/18dbd3945e5b915f9ca407a891d24e9c.jpg" alt="">
+            <img src="https://th.bing.com/th/id/OIP.e7DA6Wu6Ozp-L9XBVSB7SQHaE8?pid=ImgDet&rs=1" alt="">
+            <img src="/NashPoint.jpg" alt=""> -->
+        </div>
+    </div>
+</body>
+</html>
